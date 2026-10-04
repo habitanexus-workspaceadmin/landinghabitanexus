@@ -1,0 +1,6 @@
+{
+  "name": "HabitaNexus",
+  "description": "Marketplace de alquiler residencial con acuerdos asíncronos y custodia en Escrow fiduciario.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

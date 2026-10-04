@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hn-dark: #0B132B;
+  --color-hn-card-dark: #111C36;
+  --color-hn-surface: #051424;
+  --color-hn-surface-alt: #0d1c2d;
+  --color-hn-light: #F8FAFC;
+  --color-hn-card-light: #FFFFFF;
+  --color-hn-turquoise: #2DD4BF;
+  --color-hn-teal: #0F766E;
+  --color-hn-violet: #7C3AED;
+  --color-hn-amber: #F59E0B;
+  --color-hn-slate: #E2E8F0;
+
+  --font-display: "Space Grotesk", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-mono: "Space Grotesk", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Swiss Editorial Micro-details & Grid backgrounds */
+.grid-lines {
+  background-size: 80px 80px;
+  background-image: linear-gradient(to right, rgba(45, 212, 191, 0.035) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(45, 212, 191, 0.035) 1px, transparent 1px);
+}
+.theme-light .grid-lines,
+.light .grid-lines {
+  background-size: 80px 80px;
+  background-image: linear-gradient(to right, rgba(11, 19, 43, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(11, 19, 43, 0.04) 1px, transparent 1px);
+}
+
+.hairline-b-dark {
+  border-bottom: 1px solid rgba(45, 212, 191, 0.12);
+}
+.hairline-b-light {
+  border-bottom: 1px solid rgba(11, 19, 43, 0.1);
+}
+
+.hairline-border-dark {
+  border: 1px solid rgba(45, 212, 191, 0.15);
+}
+.hairline-border-light {
+  border: 1px solid rgba(11, 19, 43, 0.1);
+}
+
+.glass-swiss-dark {
+  background: rgba(17, 28, 54, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.glass-swiss-light {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.editorial-gradient-text-dark {
+  background: linear-gradient(135deg, #FFFFFF 0%, #2DD4BF 65%, #A78BFA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.editorial-gradient-text-light {
+  background: linear-gradient(135deg, #0B132B 0%, #0F766E 60%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Material symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth transitions for theme toggle across entire application */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Range input styling */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 9999px;
+  cursor: pointer;
+  border: 2px solid white;
+}
